@@ -70,6 +70,9 @@ Insight only matters if decision-makers can see it. Power BI and Tableau turn an
 - Marketing Campaign Dashboard — *Which channels earn their budget?*
 - Regional Sales Map — *Geography as a lens on performance.*
 
+**Digital analytics (Google Analytics 4):**
+- Website Performance Review — *Where does our traffic come from, and where does the purchase funnel leak?* (GA4 demo account, Google Merchandise Store)
+
 📁 `powerbi/` · `tableau/`
 
 ---
@@ -98,6 +101,7 @@ AI matters to businesses when it changes a decision, saves money, or opens a new
 | IBM SkillsBuild: AI Literacy | ✅ Completed |
 | Microsoft Fabric Analyst in a Day (Adastra) | ✅ Completed — July 2026 |
 | Microsoft PL-300: Power BI Data Analyst | 🟨 Exam target — end of August 2026 |
+| Google Analytics Certification (Skillshop) | 🟨 Fast-track — August 2026 |
 | Tableau Desktop Specialist | 🟨 Exam target — mid-September 2026 |
 | Azure AI Fundamentals (AI-900) | ⬜ Next — pairs with the AI in Business pillar |
 | Azure Data Fundamentals (DP-900) | ⬜ Planned |
@@ -156,6 +160,7 @@ data-analytics-portfolio/
 
 **Current focus**
 - PL-300 exam — target end of August 2026
+- Google Analytics Certification (Skillshop) — fast-track
 - Tableau Desktop Specialist — target mid-September 2026
 - Pillar 1: SQL case studies
 
