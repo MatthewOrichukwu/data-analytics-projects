@@ -69,9 +69,21 @@ Superstore is a US retailer selling furniture, office supplies and technology to
 
 ## 3. The Approach
 
+Aggregated 9,994 order lines by year using GROUP BY, with revenue, profit, and profit margin as calculated measures (SQL Server). Because the raw file was staged as text on import, dates and amounts are converted at query time with TRY_CAST. *Approach notes for Q2–Q5 to follow.*
+
 *To be completed as the analysis progresses.*
 
 ## 4. Key Findings
+
+*Findings to date — from Q1 (revenue and profit trend). Updated as the analysis progresses.*
+
+- **Superstore is a growth story, not a turnaround story.** Revenue grew 51% between 2014 and 2017 (from $484K to $733K), and profit rose every single year — from $49.5K to $93.9K, an 89% increase over the period.
+
+- **The business became more profitable per round of revenue year, not just bigger.** Profit margin improved from 10.2% in 2014 to ~13% from 2015 onward, meaning profit increased faster than sales for most of the period.
+
+- **2015 was the pivot year — and it raises the first open question.** Revenue dipped slightly (−2.8%) while profit jumped 24%, and margin stepped up from 10.2% to 13.1%. This pattern is consistent with a shift toward more profitable products or less discounting; the cause cannot be confirmed from annual totals alone and is tested in the sub-category analysis (Q2).
+
+- **A watch item for 2017: margin slipped to 12.8% while revenue grew 20%.** The dip is small, but growth that arrives with eroding margin can signal discount-fuelled sales — investigated directly in the discount analysis (Q3).
 
 *To be completed.*
 
