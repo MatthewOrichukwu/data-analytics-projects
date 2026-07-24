@@ -157,16 +157,16 @@ data-analytics-portfolio/
 - Git, GitHub and VS Code environment set up
 - First repository, first commit, first push
 - METI Japan coding assessment submitted
+- First SQL case study shipped: Retail Sales Performance Review (5 analysis scripts + full findings)
 
 **Current focus**
+- Power BI dashboard on the Superstore dataset (PL-300 exam practice + portfolio)
 - PL-300 exam — target end of August 2026
-- Google Analytics Certification (Skillshop) — fast-track
+- Google Analytics Certification (Skillshop) — evenings
 - Tableau Desktop Specialist — target mid-September 2026
-- Pillar 1: SQL case studies
 
 **Next milestone**
-- Retail Sales Performance Review (first SQL case study)
-
+- Superstore Power BI dashboard.
 ---
 
 # Future Explorations
