@@ -69,7 +69,51 @@ Superstore is a US retailer selling furniture, office supplies and technology to
 
 ## 3. The Approach
 
-Aggregated 9,994 order lines by year using GROUP BY, with revenue, profit, and profit margin as calculated measures (SQL Server). Because the raw file was staged as text on import, dates and amounts are converted at query time with TRY_CAST. *Approach notes for Q2–Q5 to follow.*
+All analysis was performed in SQL Server against a single staged table of 9,994 order lines (2014–2017). Because the raw file was staged as text on import, dates and amounts are converted at query time with TRY_CAST.
+
+- **Q1:** Aggregated order lines by year (GROUP BY), with revenue, profit, and margin as calculated measures.
+- **Q2:** Same aggregation grouped by category and sub-category, ranked by revenue, to compare what sells against what earns.
+- **Q3:** Bucketed every order line into discount bands (0%, 1–20%, 21–40%, 41%+) using CASE, then compared margin across bands.
+- **Q4:** Measured retention by matching distinct 2016 customers against 2017 buyers (LEFT JOIN on customer ID), and compared average lifetime revenue of one-time vs repeat customers.
+- **Q5:** Calculated average days between order and ship date (DATEDIFF) by region and ship mode.
+
+Scripts: [01](01_revenue_profit_by_year.sql) · [02](02_subcategory_revenue_profit.sql) · [03](03_discount_profit_impact.sql) · [04](04_customer_retention.sql) · [05](05_shipping_by_region_mode.sql)
+
+## 4. Key Findings
+
+- **Superstore is a growth story, not a turnaround story.** Revenue grew 51% between 2014 and 2017 ($484K → $733K) and profit rose every year ($49.5K → $93.9K, +89%). Margin improved from 10.2% to ~13%, with a small slip to 12.8% in 2017.
+
+- **2015 was the pivot year.** Revenue dipped slightly (−2.8%) while profit jumped 24% — consistent with a shift toward more profitable sales. Annual totals alone cannot confirm the cause; the discount findings below offer the most likely explanation.
+
+- **The company sells tables at a loss — and has for four years.** The Tables sub-category runs a −8.4% margin on substantial revenue, with Bookcases (−3.0%) and Supplies (−2.5%) also loss-making. Margins across sub-categories range from −8.4% to +44.4% (Labels), meaning product mix matters far more than volume.
+
+- **Deep discounting is the single biggest profit leak.** Undiscounted sales earn a 29.5% margin; margins fall in every discount band, and orders discounted 41%+ run at −49.9%. Those 1,139 deeply discounted order lines destroyed ~$122K of profit — equivalent to roughly 40% of all profit earned in the period. Discounting at this level is not buying growth; it is buying losses.
+
+- **The customer base is exceptional — the problem is pricing, not loyalty.** 87.5% of 2016 customers returned in 2017, and repeat customers average $2,935 lifetime revenue vs $431 for one-time buyers (6.8x). Nearly all customers (781 of 793) are repeat buyers. (Note: with only 12 one-time customers, that comparison is indicative rather than robust.)
+
+- **Operations are consistent and require no intervention.** Average days-to-ship is uniform across all four regions within each service class (Same Day ~0, First Class ~2.2, Second Class ~3.3, Standard ~5), with no regional outliers.
+
+## 5. Recommendation
+
+Superstore's growth and customer loyalty are genuine strengths; its profit leak is self-inflicted through pricing. Three actions, in priority order:
+
+1. **Cap discounts.** Margins turn sharply negative beyond ~40% discount. Introduce an approval threshold above 30% and eliminate the 41%+ band except for clearance; this single change addresses a ~$122K cumulative leak.
+2. **Fix or exit loss-making sub-categories.** Reprice, renegotiate supplier costs, or reduce the range in Tables and Bookcases. If margins cannot be lifted above zero, treat these as traffic drivers with strict volume limits — or discontinue.
+3. **Protect the loyal base while raising prices.** With 87.5% retention, Superstore has more pricing power than its discounting behaviour suggests. Test reduced discounting on repeat customers, who demonstrably return regardless.
+
+*Follow-up analysis recommended: a year-by-year sub-category mix view to confirm the driver of the 2015 margin step-up, and a web conversion analysis (separate GA4 case study) to cover the demand funnel this dataset cannot see.*
+
+## 6. Behind the Scenes
+
+- Initial CSV load failed because the Profit column contained missing values; staged all columns as nullable text, then validated and typed them in SQL with TRY_CAST.
+- All five analysis scripts are in this folder, numbered in question order.
+- Dataset: [Sample Superstore (Kaggle)](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final), 9,994 rows, 2014–2017.
+
+## 7. What I Learned
+
+- The gap between *what sells* and *what earns* is where the interesting findings live — revenue rankings and profit rankings tell different stories.
+- Aggregates hide causes: annual totals suggested a hypothesis (the 2015 shift), but only more granular cuts (discount bands) could explain it. Stating clearly what the data *cannot* confirm is part of the job.
+- Practical SQL: GROUP BY on multiple columns, calculated measures, CASE bucketing, subqueries, LEFT JOIN for cohort matching, DATEDIFF — plus the workflow of staging messy data as text and typing it at query time.
 
 *To be completed as the analysis progresses.*
 
