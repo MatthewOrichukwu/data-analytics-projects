@@ -42,6 +42,50 @@ Superstore is a US retailer selling furniture, office supplies and technology to
 
 ## 7. What I Learned
 
+*To be completed.*# Retail Sales Performance Review
+
+> *Where does Superstore actually make its money — and where is it leaking?*
+
+**Pillar:** Data & SQL
+**Tools:** SQL Server (LocalDB), SSMS
+**Dataset:** [Sample Superstore (Kaggle)](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
+**Status:** 🟨 In progress
+
+---
+
+## 1. The Business Context
+
+Superstore is a US retailer selling furniture, office supplies and technology to consumer, corporate and home-office customers. Leadership has four years of order history (2014–2017) and wants a full performance review before setting next year's plan: what drives revenue, what drives profit, and where is the business losing money?
+
+## 2. The Questions
+
+1. Revenue by year and profit trend — is the business growing, and is profit keeping pace?
+2. Revenue by sub-category vs profit margin — do our best sellers actually make us money?
+3. Discount sensitivity and profit impact — is discounting buying growth or buying losses?
+4. 2016–2017 customer retention and loyal customer valuation — who comes back, and what are they worth?
+5. Regional shipping fulfilment by mode — how fast do we ship, and where are we slow?
+
+**Data limitations:** Conversion analysis and competitor benchmarking are out of scope — the dataset contains completed orders only, with no website traffic or market data. Conversion will be addressed in a separate Google Analytics (GA4) case study.
+
+## 3. The Approach
+
+*To be completed as the analysis progresses.*
+
+## 4. Key Findings
+
+*To be completed.*
+
+## 5. Recommendation
+
+*To be completed.*
+
+## 6. Behind the Scenes
+
+- Initial CSV load failed because the Profit column contained missing values; staged all columns as nullable text, then validated and typed them in SQL.
+- SQL scripts: *links to be added.*
+
+## 7. What I Learned
+
 *To be completed.*
 
 
