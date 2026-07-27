@@ -3,7 +3,7 @@
 > *Where does Superstore actually make its money — and where is it leaking?*
 
 **Pillar:** Data & SQL
-**Tools:** SQL Server (LocalDB), SSMS
+**Tools:** SQL Server (LocalDB), SSMS, Power BI Desktop
 **Dataset:** [Sample Superstore (Kaggle)](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
 **Status:** 🟨 In progress
 
@@ -39,7 +39,10 @@ A companion Power BI dashboard visualises all five findings; see Behind the Scen
 ## 6. Behind the Scenes
 
 - Initial CSV load failed because the Profit column contained missing values; staged all columns as nullable text, then validated and typed them in SQL.
-- Rebuilt the analysis as an interactive Power BI dashboard connected to a SQL Server view (`vw_superstore_clean`), covering all five questions across two report pages. [View the .pbix](../../powerbi/retail_sales_dashboard.pbix)
+- - Rebuilt the analysis as an interactive two-page Power BI dashboard connected to a SQL Server view (`vw_superstore_clean`), covering all five questions:
+- Page 1 — Sales Performance: revenue & profit trend, sub-category profitability, and discount-band margin impact.
+- Page 2 — Customer Retention & Value: 2016–2017 retention rate, repeat vs one-time customer value, and shipping speed by region and mode.
+- [View the .pbix](../../powerbi/retail_sales_dashboard.pbix) [View the .pbix](../../powerbi/retail_sales_dashboard.pbix)
 - SQL scripts: *links to be added.*
 
 ## 7. What I Learned
