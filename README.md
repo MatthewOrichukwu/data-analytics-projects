@@ -11,12 +11,12 @@ Every project here starts with a business question and ends with an insight a de
 # Background
 
 - 🎓 MSc Managing Innovation and Information Technology (Distinction)
-- 📊 Studying for Microsoft PL-300: Power BI Data Analyst — Coursera exam preparation completed (certificate earned)
-- 🏅 Microsoft Learn Power BI event certificate — Chart with Data
-- 🧵 Microsoft Fabric Analyst in a Day — workshop certificate (delivered by Adastra)
-- 🤖 IBM SkillsBuild — AI Literacy certificate
-- 🌏 METI Japan Internship Programme — assessment completed, awaiting results
-- 📈 Preparing for the Tableau Desktop Specialist certification
+-  Studying for Microsoft PL-300: Power BI Data Analyst — Coursera exam preparation completed (certificate earned)
+-  Microsoft Learn Power BI event certificate — Chart with Data
+-  Microsoft Fabric Analyst in a Day — workshop certificate (delivered by Adastra)
+-  IBM SkillsBuild — AI Literacy certificate
+-  METI Japan Internship Programme — assessment completed, awaiting results
+-  Preparing for the Tableau Desktop Specialist certification
 
 ---
 
@@ -31,7 +31,7 @@ Businesses sit on mountains of data. SQL is how you interrogate it.
 **Focus:** writing queries that answer commercial questions — sales trends, customer behaviour, performance gaps — clearly and efficiently.
 
 **Case studies:**
-- Retail Sales Performance Review — *Which products, regions and periods drive revenue, and where are we underperforming?*
+- Retail Sales Performance Review (sql/retail-sales-performance-review/) — *Which products, regions and periods drive revenue, and where are we underperforming? Includes a two-page interactive Power BI dashboard.*
 - Customer Purchase Patterns — *Who are our most valuable customers, and what do they buy together?*
 - HR Attrition Analysis — *Which departments lose people fastest, and what do leavers have in common?*
 
