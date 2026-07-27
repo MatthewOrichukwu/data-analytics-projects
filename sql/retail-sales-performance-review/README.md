@@ -24,8 +24,9 @@ Superstore is a US retailer selling furniture, office supplies and technology to
 **Data limitations:** Conversion analysis and competitor benchmarking are out of scope — the dataset contains completed orders only, with no website traffic or market data. Conversion will be addressed in a separate Google Analytics (GA4) case study.
 
 ## 3. The Approach
+A companion Power BI dashboard visualises all five findings; see Behind the Scenes.
 
-*To be completed as the analysis progresses.*
+*A companion Power BI dashboard visualises all five findings; see Behind the Scenes.*
 
 ## 4. Key Findings
 
@@ -38,6 +39,7 @@ Superstore is a US retailer selling furniture, office supplies and technology to
 ## 6. Behind the Scenes
 
 - Initial CSV load failed because the Profit column contained missing values; staged all columns as nullable text, then validated and typed them in SQL.
+- Rebuilt the analysis as an interactive Power BI dashboard connected to a SQL Server view (`vw_superstore_clean`), covering all five questions across two report pages. [View the .pbix](../../powerbi/retail_sales_dashboard.pbix)
 - SQL scripts: *links to be added.*
 
 ## 7. What I Learned
