@@ -42,8 +42,8 @@ A companion Power BI dashboard visualises all five findings; see Behind the Scen
 - - Rebuilt the analysis as an interactive two-page Power BI dashboard connected to a SQL Server view (`vw_superstore_clean`), covering all five questions:
 - Page 1 — Sales Performance: revenue & profit trend, sub-category profitability, and discount-band margin impact.
 - Page 2 — Customer Retention & Value: 2016–2017 retention rate, repeat vs one-time customer value, and shipping speed by region and mode.
-- Page 1 - Sales Performance](screenshots/page1-sales-performance.png)
-- Page 2 - Customer Retention](screenshots/page2-customer-retention.png)
+- ![Page 1 - Sales Performance](screenshots/page1-sales-performance.png)
+![Page 2 - Customer Retention](screenshots/page2-customer-retention.png)
 - [View the .pbix](../../powerbi/retail_sales_dashboard.pbix) [View the .pbix](../../powerbi/retail_sales_dashboard.pbix)
 - SQL scripts: *links to be added.*
 
